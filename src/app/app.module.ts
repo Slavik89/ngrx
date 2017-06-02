@@ -5,15 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { StudentsContainerComponent } from './students-entity/components/students-container/students-container.component';
 import { StudentsComponent } from './students-entity/components/students/students.component';
-import { StudentComponent } from './students-entity/components/student/student.component';
 import {StudentsDataService} from './students-entity/services/students-data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentsComponent,
-    StudentComponent
+    StudentsContainerComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,

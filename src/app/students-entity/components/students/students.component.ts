@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Student} from '../../models/student-model';
-import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-students',
@@ -9,7 +8,7 @@ import {Observable} from 'rxjs/Observable';
 })
 export class StudentsComponent implements OnInit {
 
-  students$: Observable<Student[]>;
+  @Input() students: Student[];
 
   constructor() { }
 
