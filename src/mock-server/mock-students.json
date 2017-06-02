@@ -1,0 +1,44 @@
+{
+  "students": [
+    {
+      "id": "s1",
+      "name": "Jon",
+      "surname": "Smith",
+      "password": "1234",
+      "email": "jon@smith",
+      "gradebook_id": "gb1",
+      "group_name": "IT1",
+      "faculty_name": "IT"
+    },
+    {
+      "id": "s1",
+      "name": "Jon",
+      "surname": "Smith",
+      "password": "1234",
+      "email": "jon@smith",
+      "gradebook_id": "gb1",
+      "group_name": "IT1",
+      "faculty_name": "IT"
+    },
+    {
+      "id": "s1",
+      "name": "Jon",
+      "surname": "Smith",
+      "password": "1234",
+      "email": "jon@smith",
+      "gradebook_id": "gb1",
+      "group_name": "IT1",
+      "faculty_name": "IT"
+    },
+    {
+      "id": "s1",
+      "name": "Jon",
+      "surname": "Smith",
+      "password": "1234",
+      "email": "jon@smith",
+      "gradebook_id": "gb1",
+      "group_name": "IT1",
+      "faculty_name": "IT"
+    }
+  ]
+}
