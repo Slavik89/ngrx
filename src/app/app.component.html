@@ -1,3 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<app-side-nav [open]="showSideNav">
+  <a md-list-item routerLink="/" (click)="closeSideNav()">
+    <md-icon md-list-icon>book</md-icon>
+    <span md-line>Home</span>
+    <span md-line class="secondary">Go to home page</span>
+  </a>
+  <a md-list-item routerLink="/student" (click)="closeSideNav()">
+    <md-icon md-list-icon>search</md-icon>
+    <span md-line>Home</span>
+    <span md-line class="secondary">Go to students page</span>
+  </a>
+</app-side-nav>
+<app-header (openMenu)="openSideNav()"></app-header>

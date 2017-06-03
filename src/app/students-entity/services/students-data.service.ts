@@ -7,7 +7,7 @@ import { Student } from '../models/student-model';
 @Injectable()
 export class StudentsDataService {
 
-  private API_PATH = '../../../mock-server/mock-students.json';
+  private API_PATH = '../../../api/students.json';
 
   constructor(private http: Http) { }
 
