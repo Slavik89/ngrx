@@ -8,7 +8,7 @@ import {NotFoundPageComponent} from './core/not-found-page/not-found-page.compon
 export const routes: Routes = [
   {
     path: '',
-    component: StudentsContainerComponent
+    component: NotFoundPageComponent
   },
   {
     path: 'student',

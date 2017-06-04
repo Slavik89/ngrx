@@ -3,7 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
+import {
+  MdButtonModule, MdCardModule,
+  MdIconModule, MdLineModule, MdListModule, MdSidenavModule,
+  MdToolbarModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { StudentsContainerComponent } from './students-entity/components/students-container/students-container.component';
@@ -15,6 +19,7 @@ import { NotFoundPageComponent } from './core/not-found-page/not-found-page.comp
 
 import {routes} from './router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NavItemComponent } from './shared/components/nav-item/nav-item.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +28,21 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     StudentsComponent,
     SideNavComponent,
     HeaderComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    NavItemComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
+    MdSidenavModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdLineModule,
+    MdListModule,
+    MdButtonModule,
+    MdCardModule,
     RouterModule.forRoot(routes, { useHash: true }),
   ],
   providers: [StudentsDataService],
