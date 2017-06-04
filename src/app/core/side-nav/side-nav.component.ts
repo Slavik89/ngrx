@@ -8,7 +8,7 @@ import {Component, Input} from '@angular/core';
 export class SideNavComponent {
   @Input() open = false;
 
-  onClosedSideNav(e) {
-    console.log('closed', e);
+  onClosedSideNav() {
+    console.log('closed');
   }
 }

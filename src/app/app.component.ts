@@ -16,4 +16,8 @@ export class AppComponent {
   openSideNav() {
     this.showSideNav = true;
   }
+
+  closeNav() {
+    console.log('drop');
+  }
 }

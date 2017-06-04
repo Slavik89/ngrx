@@ -1,4 +1,4 @@
-<md-sidenav #sidenav [opened]="open">
+<md-sidenav #sidenav [opened]="open" (close)="onClosedSideNav()">
   <md-nav-list>
     <ng-content></ng-content>
   </md-nav-list>
