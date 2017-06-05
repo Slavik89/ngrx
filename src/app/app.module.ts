@@ -20,6 +20,7 @@ import { NotFoundPageComponent } from './core/not-found-page/not-found-page.comp
 import {routes} from './router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NavItemComponent } from './shared/components/nav-item/nav-item.component';
+import { EntityCardComponent } from './shared/components/entity-card/entity-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NavItemComponent } from './shared/components/nav-item/nav-item.componen
     SideNavComponent,
     HeaderComponent,
     NotFoundPageComponent,
-    NavItemComponent
+    NavItemComponent,
+    EntityCardComponent
   ],
   imports: [
     BrowserModule,

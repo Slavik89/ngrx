@@ -1,5 +1,9 @@
-<md-sidenav-container fullscreen (backdropClick)="closeNav()">
+<md-sidenav-container fullscreen>
   <app-side-nav [open]="showSideNav">
+    <div class="close-button" (click)="closeSideNav()">
+      <md-icon class="fa fa-lg close-icon" fontIcon="fa-times"></md-icon>
+      <span class="secondary text-close">Close</span>
+    </div>
     <app-nav-item
       (activate)="closeSideNav()"
       routerLink="/"
