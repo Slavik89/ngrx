@@ -1,3 +1,11 @@
 md-toolbar {
   background-color: cadetblue;
 }
+
+button {
+  background-color: cadetblue;
+}
+
+button:focus, button:active {
+  border: none;
+}

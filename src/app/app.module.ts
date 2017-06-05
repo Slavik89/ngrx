@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import {
   MdButtonModule, MdCardModule,
-  MdIconModule, MdLineModule, MdListModule, MdSidenavModule,
+  MdIconModule, MdIconRegistry, MdLineModule, MdListModule, MdSidenavModule,
   MdToolbarModule
 } from '@angular/material';
 
@@ -45,7 +45,11 @@ import { NavItemComponent } from './shared/components/nav-item/nav-item.componen
     MdCardModule,
     RouterModule.forRoot(routes, { useHash: true }),
   ],
-  providers: [StudentsDataService],
+  providers: [MdIconRegistry, StudentsDataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(mdIconRegistry: MdIconRegistry) {
+    mdIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+  }
+}
