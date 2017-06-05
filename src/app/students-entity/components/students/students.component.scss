@@ -1,0 +1,9 @@
+.students-card-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+app-entity-card {
+  margin: 0 15px;
+}
