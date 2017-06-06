@@ -8,7 +8,8 @@
       "email": "jon@smith",
       "gradebook_id": "gb1",
       "group_name": "IT1",
-      "faculty_name": "IT"
+      "faculty_name": "IT",
+      "img": ""
     },
     {
       "id": "s1",
@@ -18,7 +19,8 @@
       "email": "jon@smith",
       "gradebook_id": "gb1",
       "group_name": "IT1",
-      "faculty_name": "IT"
+      "faculty_name": "IT",
+      "img": ""
     },
     {
       "id": "s1",
@@ -28,7 +30,8 @@
       "email": "jon@smith",
       "gradebook_id": "gb1",
       "group_name": "IT1",
-      "faculty_name": "IT"
+      "faculty_name": "IT",
+      "img": ""
     },
     {
       "id": "s1",
@@ -38,7 +41,8 @@
       "email": "jon@smith",
       "gradebook_id": "gb1",
       "group_name": "IT1",
-      "faculty_name": "IT"
+      "faculty_name": "IT",
+      "img": ""
     }
   ]
 }
