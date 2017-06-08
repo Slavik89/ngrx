@@ -36,7 +36,7 @@ import * as student from '../actions/studentsActions';
 export class StudentEffects {
 
   @Effect()
-  get$: Observable<Action> = this.actions$
+  getStudents$: Observable<Action> = this.actions$
     .ofType(student.GET_STUDENTS)
     .switchMap(() => {
       return this.studentDataService.fetchStudents()

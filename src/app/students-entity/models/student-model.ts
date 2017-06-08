@@ -10,5 +10,5 @@ export interface Student {
   gradebook_id: string;
   group_name: string;
   faculty_name: string;
-  photo?: string;
+  img: string;
 }

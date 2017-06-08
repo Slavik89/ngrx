@@ -6,13 +6,7 @@ import {Student} from '../../models/student-model';
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.scss']
 })
-export class StudentsComponent implements OnInit {
+export class StudentsComponent {
 
   @Input() students: Student[];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

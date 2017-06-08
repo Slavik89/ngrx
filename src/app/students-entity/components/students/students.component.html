@@ -1,6 +1,6 @@
 <div class="students-card-container">
-  <app-entity-card></app-entity-card>
-  <app-entity-card></app-entity-card>
-  <app-entity-card></app-entity-card>
+  <ng-container *ngFor="let student of students">
+    <app-entity-card [student]="student"></app-entity-card>
+  </ng-container>
 </div>
 
