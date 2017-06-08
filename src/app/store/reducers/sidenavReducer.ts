@@ -1,4 +1,4 @@
-import * as sidenav from '../actions/sidenav-actions';
+import * as sidenav from '../actions/sidenavActions';
 
 
 export interface State {

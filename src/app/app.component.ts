@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 
 import * as rootReducer from './store/reducers';
-import * as sidenavActions from './store/actions/sidenav-actions';
+import * as sidenavActions from './store/actions/sidenavActions';
 
 @Component({
   selector: 'app-root',
