@@ -6,5 +6,5 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Output() openMenu = new EventEmitter();
+  @Output() openSidenav = new EventEmitter();
 }

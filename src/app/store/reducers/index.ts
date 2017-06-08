@@ -36,7 +36,7 @@ import { combineReducers } from '@ngrx/store';
  * the state of the reducer plus any selector functions. The `* as`
  * notation packages up all of the exports into a single object.
  */
-import * as fromSidenav from './sidenavReducer';
+import * as sidenavReducer from './sidenavReducer';
 
 
 /**
@@ -44,7 +44,7 @@ import * as fromSidenav from './sidenavReducer';
  * our top level state interface is just a map of keys to inner state types.
  */
 export interface State {
-  sidenav: fromSidenav.State;
+  sidenav: sidenavReducer.State;
 }
 
 
@@ -56,7 +56,7 @@ export interface State {
  * the result from right to left.
  */
 const reducers = {
-  sidenav: fromSidenav.reducer
+  sidenav: sidenavReducer.reducer
 };
 
 const developmentReducer: ActionReducer<State> = compose(storeFreeze, combineReducers)(reducers);
@@ -70,28 +70,10 @@ export function reducer(state: any, action: any) {
   }
 }
 
-
 /**
- * A selector function is a map function factory. We pass it parameters and it
- * returns a function that maps from the larger state tree into a smaller
- * piece of state. This selector simply selects the `books` state.
- *
- * Selectors are used with the `select` operator.
- *
- * ```ts
- * class MyComponent {
- * 	constructor(state$: Observable<State>) {
- * 	  this.booksState$ = state$.select(getBooksState);
- * 	}
- * }
- * ```
- */
-
-
-/**
- * Layout Reducers
+ * Sidenav Reducers
  */
 export const getSidenavState = (state: State) => state.sidenav;
 
-export const getShowSidenav = createSelector(getSidenavState, fromSidenav.getShowSidenav);
+export const getShowSidenav = createSelector(getSidenavState, sidenavReducer.getShowSidenav);
 

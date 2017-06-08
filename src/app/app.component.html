@@ -1,25 +1,25 @@
 <md-sidenav-container fullscreen>
-  <app-side-nav [open]="showSideNav">
-    <div class="close-button" (click)="closeSideNav()">
+  <app-side-nav [open]="showSidenav$ | async">
+    <div class="close-button" (click)="onCloseSidenav()">
       <md-icon class="fa fa-lg close-icon" fontIcon="fa-times"></md-icon>
       <span class="secondary text-close">Close</span>
     </div>
     <app-nav-item
-      (activate)="closeSideNav()"
+      (activate)="onCloseSidenav()"
       routerLink="/"
       icon="fa-home"
       hint="Go to home back">
       Home
     </app-nav-item>
     <app-nav-item
-      (activate)="closeSideNav()"
+      (activate)="onCloseSidenav()"
       routerLink="/student"
       icon="fa-users"
       hint="Go to students page!">
       Students page
     </app-nav-item>
   </app-side-nav>
-  <app-header (openMenu)="openSideNav()"></app-header>
+  <app-header (openSidenav)="onOpenSidenav()"></app-header>
   <router-outlet></router-outlet>
 </md-sidenav-container>
 

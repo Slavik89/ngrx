@@ -2,13 +2,14 @@ import { Routes } from '@angular/router';
 
 import {StudentsContainerComponent} from './students-entity/components/students-container/students-container.component';
 import {NotFoundPageComponent} from './core/not-found-page/not-found-page.component';
+import {HomeComponent} from './home/home.component';
 
 
 
 export const routes: Routes = [
   {
     path: '',
-    component: NotFoundPageComponent
+    component: HomeComponent
   },
   {
     path: 'student',

@@ -12,15 +12,19 @@ import {
 import { AppComponent } from './app.component';
 import { StudentsContainerComponent } from './students-entity/components/students-container/students-container.component';
 import { StudentsComponent } from './students-entity/components/students/students.component';
-import {StudentsDataService} from './students-entity/services/students-data.service';
+import { StudentsDataService } from './students-entity/services/students-data.service';
 import { SideNavComponent } from './core/side-nav/side-nav.component';
 import { HeaderComponent } from './core/header/header.component';
 import { NotFoundPageComponent } from './core/not-found-page/not-found-page.component';
 
-import {routes} from './router';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { routes } from './router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavItemComponent } from './shared/components/nav-item/nav-item.component';
 import { EntityCardComponent } from './shared/components/entity-card/entity-card.component';
+import { HomeComponent } from './home/home.component';
+import { StoreModule } from'@ngrx/store';
+import { reducer } from'./store/reducers/index';
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { EntityCardComponent } from './shared/components/entity-card/entity-card
     HeaderComponent,
     NotFoundPageComponent,
     NavItemComponent,
-    EntityCardComponent
+    EntityCardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,29 @@ import { EntityCardComponent } from './shared/components/entity-card/entity-card
     MdListModule,
     MdButtonModule,
     MdCardModule,
-    RouterModule.forRoot(routes, { useHash: true }),
+
+    /**
+     * StoreModule.provideStore is imported once in the root module, accepting a reducer
+     * function or object map of reducer functions. If passed an object of
+     * reducers, combineReducers will be run creating your application
+     * meta-reducer. This returns all providers for an @ngrx/store
+     * based application.
+     */
+    StoreModule.provideStore(reducer),
+
+    /**
+     * Store devtools instrument the store retaining past versions of state
+     * and recalculating new states. This enables powerful time-travel
+     * debugging.
+     *
+     * To use the debugger, install the Redux Devtools extension for either
+     * Chrome or Firefox
+     *
+     * See: https://github.com/zalmoxisus/redux-devtools-extension
+     */
+    StoreDevtoolsModule.instrumentOnlyWithExtension(),
+
+    RouterModule.forRoot(routes),
   ],
   providers: [MdIconRegistry, StudentsDataService],
   bootstrap: [AppComponent]
