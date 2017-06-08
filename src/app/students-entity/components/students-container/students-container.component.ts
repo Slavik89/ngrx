@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import {Student} from '../../models/student-model';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs/Observable';
-import {StudentsDataService} from '../../services/students-data.service';
+
+import * as fromRoot from '../../../store/reducers';
+import {Student} from '../../models/student-model';
+
 
 @Component({
   selector: 'app-students-container',
   templateUrl: './students-container.component.html',
-  styleUrls: ['./students-container.component.scss']
+  styleUrls: ['./students-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StudentsContainerComponent implements OnInit {
+export class StudentsContainerComponent {
 
   students$: Observable<Student[]>;
 
-  constructor(private dataService: StudentsDataService) { }
-
-  ngOnInit() {
+  constructor(store: Store<fromRoot.State>) {
+    this.students$ = store.select(fromRoot.getStudentEntities);
   }
 
-  getStudent() {
-
-  }
 
 }

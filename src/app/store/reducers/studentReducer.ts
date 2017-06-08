@@ -32,6 +32,14 @@ export function reducer(state = initialState, action: students.Actions): State {
       };
     }
 
+    case students.LOAD_FAIL: {
+      return {
+        loaded: false,
+        loading: false,
+        entities: []
+      };
+    }
+
     case students.ADD_STUDENT: {
       const student = action.payload;
       const shouldAddStudent = state.entities.every(entity => entity.id !== student.id);

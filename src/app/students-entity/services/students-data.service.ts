@@ -11,7 +11,7 @@ export class StudentsDataService {
 
   constructor(private http: Http) { }
 
-  fetchStudents(): Observable<Student> {
+  fetchStudents(): Observable<Student[]> {
     return this.http.get(`${this.API_PATH}`)
       .map(res => res.json());
   }

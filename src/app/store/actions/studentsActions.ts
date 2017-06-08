@@ -2,7 +2,7 @@ import { Action } from '@ngrx/store';
 import {Student} from '../../students-entity/models/student-model';
 
 
-
+export const GET_STUDENTS =            '[Student] Get Students';
 export const ADD_STUDENT =             '[Student] Add Student';
 export const ADD_STUDENT_SUCCESS =     '[Student] Add Student Success';
 export const ADD_STUDENT_FAIL =        '[Student] Add Student Fail';
@@ -21,6 +21,13 @@ export class AddStudent implements Action {
   readonly type = ADD_STUDENT;
 
   constructor(public payload: Student) { }
+}
+
+/**
+ * Add Student Actions
+ */
+export class GetStudents implements Action {
+  readonly type = GET_STUDENTS;
 }
 
 export class AddStudentSuccess implements Action {
@@ -72,8 +79,6 @@ export class LoadSuccess implements Action {
 
 export class LoadFail implements Action {
   readonly type = LOAD_FAIL;
-
-  constructor(public payload: any) { }
 }
 
 
@@ -86,5 +91,6 @@ export type Actions
   | RemoveStudentFail
   | Load
   | LoadSuccess
-  | LoadFail;
+  | LoadFail
+  | GetStudents;
 
