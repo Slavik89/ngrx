@@ -28,6 +28,7 @@ import { EntityCardComponent } from './shared/components/entity-card/entity-card
 import { HomeComponent } from './home/home.component';
 import { reducer } from './store/reducers/index';
 import { StudentEffects } from './store/effects/studetsEffects';
+import { TableComponent } from './shared/components/table/table.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { StudentEffects } from './store/effects/studetsEffects';
     NotFoundPageComponent,
     NavItemComponent,
     EntityCardComponent,
-    HomeComponent
+    HomeComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
