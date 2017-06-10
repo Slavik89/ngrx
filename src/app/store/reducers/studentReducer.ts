@@ -28,7 +28,7 @@ export function reducer(state = initialState, action: students.Actions): State {
       return {
         loaded: true,
         loading: false,
-        entities: [...students]
+        entities: [...students['students']]
       };
     }
 

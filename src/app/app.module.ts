@@ -9,6 +9,10 @@ import {
   MdToolbarModule
 } from '@angular/material';
 
+import { StoreModule } from '@ngrx/store';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+
 import { AppComponent } from './app.component';
 import { StudentsContainerComponent } from './students-entity/components/students-container/students-container.component';
 import { StudentsComponent } from './students-entity/components/students/students.component';
@@ -22,9 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavItemComponent } from './shared/components/nav-item/nav-item.component';
 import { EntityCardComponent } from './shared/components/entity-card/entity-card.component';
 import { HomeComponent } from './home/home.component';
-import { StoreModule } from'@ngrx/store';
-import { reducer } from'./store/reducers/index';
-import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import { reducer } from './store/reducers/index';
+import { StudentEffects } from './store/effects/studetsEffects';
+
 
 @NgModule({
   declarations: [
@@ -71,6 +75,14 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
      * See: https://github.com/zalmoxisus/redux-devtools-extension
      */
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
+
+    /**
+     * EffectsModule.run() sets up the effects class to be initialized
+     * immediately when the application starts.
+     *
+     * See: https://github.com/ngrx/effects/blob/master/docs/api.md#run
+     */
+    EffectsModule.run(StudentEffects),
 
     RouterModule.forRoot(routes),
   ],
