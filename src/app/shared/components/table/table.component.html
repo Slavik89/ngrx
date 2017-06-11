@@ -1,0 +1,31 @@
+<div class='table-responsive'>
+  <table class='table list-items'>
+    <thead>
+    <tr>
+      <th>№</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Group</th>
+      <th>Faculty</th>
+      <th>Go to details</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students  let i=index">
+      <td>{{i+1}}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.surname }}</td>
+      <td>{{ student.group_name }}</td>
+      <td>{{ student.faculty_name }}</td>
+      <td>
+        <div class="btn-group-sm action-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary" title="Go to details" (click)="onSelectStudent(student)">
+            <i class="fa fa-info fa-fw" aria-hidden="true"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
