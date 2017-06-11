@@ -7,9 +7,9 @@ import {Student} from '../models/student-model';
 
 const Students = [
   new Student('s1', 'John', 'Smith', '1234', 'IT1', 'IT'),
-  new Student('s1', 'John', 'Smith', '1234', 'IT1', 'IT'),
-  new Student('s1', 'John', 'Smith', '1234', 'IT1', 'IT'),
-  new Student('s1', 'John', 'Smith', '1234', 'IT1', 'IT'),
+  new Student('s2', 'John', 'Smith', '1234', 'IT1', 'IT'),
+  new Student('s3', 'John', 'Smith', '1234', 'IT1', 'IT'),
+  new Student('s4', 'John', 'Smith', '1234', 'IT1', 'IT'),
 ];
 
 @Injectable()
