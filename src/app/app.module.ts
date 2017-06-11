@@ -29,6 +29,7 @@ import { HomeComponent } from './home/home.component';
 import { reducer } from './store/reducers/index';
 import { StudentEffects } from './store/effects/studetsEffects';
 import { TableComponent } from './shared/components/table/table.component';
+import { StudentDetailComponent } from './students-entity/components/student-detail/student-detail.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { TableComponent } from './shared/components/table/table.component';
     NavItemComponent,
     EntityCardComponent,
     HomeComponent,
-    TableComponent
+    TableComponent,
+    StudentDetailComponent
   ],
   imports: [
     BrowserModule,

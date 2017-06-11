@@ -1,14 +1,10 @@
-/**
- * Created by Petro on 02.06.2017.
- */
-export interface Student {
-  id: string;
-  name: string;
-  surname: string;
-  password: string;
-  email: string;
-  gradebook_id: string;
-  group_name: string;
-  faculty_name: string;
-  img: string;
+export class Student {
+  constructor(public id: string,
+              public name: string,
+              public surname: string,
+              public password: string,
+              public group_name: string,
+              public faculty_name: string,
+              public img?: string) {
+  }
 }

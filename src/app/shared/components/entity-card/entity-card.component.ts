@@ -7,15 +7,11 @@ import {Student} from '../../../students-entity/models/student-model';
   templateUrl: './entity-card.component.html',
   styleUrls: ['./entity-card.component.scss']
 })
-export class EntityCardComponent  {
+export class EntityCardComponent {
   @Input() student: Student;
 
   get fullName() {
     return `${this.student.name} ${this.student.surname}`;
-  }
-
-  get gradeBook() {
-    return this.student.gradebook_id;
   }
 
   get photo() {
@@ -24,5 +20,5 @@ export class EntityCardComponent  {
 
   get studyPlace() {
     return `${this.student.faculty_name} ${this.student.group_name}`;
-}
+  }
 }
