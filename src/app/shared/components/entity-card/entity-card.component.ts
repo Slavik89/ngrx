@@ -18,7 +18,11 @@ export class EntityCardComponent {
     return this.student.img;
   }
 
-  get studyPlace() {
-    return `${this.student.faculty_name} ${this.student.group_name}`;
+  get faculty() {
+    return this.student.faculty_name;
+  }
+
+  get group() {
+    return this.student.group_name;
   }
 }
