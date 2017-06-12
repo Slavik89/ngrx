@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {StudentsDataService} from '../../services/students-data.service';
-import {Student} from "../../models/student-model";
+import {Student} from '../../models/student-model';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-student-detail',
@@ -10,13 +11,12 @@ import {Student} from "../../models/student-model";
 })
 export class StudentDetailComponent {
 
-  student: Student;
+  student$: Observable<Student>;
 
   constructor(route: ActivatedRoute,
               private studentDataService: StudentsDataService) {
-    route.params
+    this.student$ = route.params
       .switchMap(params => this.studentDataService.fetchStudent(params.id))
-      .map(student => student[0])
-      .subscribe(student => this.student = student);
+      .map(student => student[0]);
   }
 }
