@@ -93,7 +93,8 @@ import { StudentProfileComponent } from './students-entity/components/student-pr
     RouterModule.forRoot(routes),
   ],
   providers: [MdIconRegistry, StudentsDataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [RouterModule]
 })
 export class AppModule {
   constructor(mdIconRegistry: MdIconRegistry) {

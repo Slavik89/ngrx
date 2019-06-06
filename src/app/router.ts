@@ -23,6 +23,11 @@ export const routes: Routes = [
   {
     path: '**',
     component: NotFoundPageComponent
+  },
+  {
+    path: 'subject',
+    loadChildren: () => import('./subjects-entity/subjects.module').then(mod => mod.SubjectsModule)    
   }
+    
 ];
 

@@ -18,6 +18,13 @@
       hint="Go to students page!">
       Students page
     </app-nav-item>
+    <app-nav-item
+      (activate)="onCloseSidenav()"
+      routerLink="/subject"
+      icon="fa-users"
+      hint="Go to ssubjects page!">
+      Subjects page
+    </app-nav-item>
   </app-side-nav>
   <app-header (openSidenav)="onOpenSidenav()"></app-header>
   <router-outlet></router-outlet>
