@@ -1,11 +1,14 @@
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { SubjectsContainerComponent } from './components/subjects-container/subjects-container.component';
-import { routes } from './subjects-routing';
+import { SubjectsRoutingModule } from './subjects-routing.module';
 
 @NgModule({
-  imports: [    
-    
+  imports: [  
+    CommonModule,  
+    SubjectsRoutingModule,
   ],
   declarations: [
     SubjectsContainerComponent

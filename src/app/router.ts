@@ -21,13 +21,14 @@ export const routes: Routes = [
     component: StudentDetailComponent
   },
   {
+    path: 'subject',    
+    loadChildren: './subjects-entity/subjects.module#SubjectsModule'
+  },
+  {
     path: '**',
     component: NotFoundPageComponent
   },
-  {
-    path: 'subject',
-    loadChildren: () => import('./subjects-entity/subjects.module').then(mod => mod.SubjectsModule)    
-  }
+  
     
 ];
 
