@@ -46,7 +46,7 @@ import { StudentProfileComponent } from './students-entity/components/student-pr
     HomeComponent,
     TableComponent,
     StudentDetailComponent,
-    StudentProfileComponent
+    StudentProfileComponent    
   ],
   imports: [
     BrowserModule,
