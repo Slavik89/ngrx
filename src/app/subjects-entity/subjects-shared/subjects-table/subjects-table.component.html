@@ -7,10 +7,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let subject of subjects  let i=index">
-      <td>{{i+1}}</td>
-      <td>{{ subject.name }}</td>    
-    </tr>
+    <tr>
+      <td>1</td>
+      <td>Biology</td>    
+      <td>        
+        <a routerLink="details">See details</a>
+      </td>
+    </tr>    
     </tbody>
-  </table>
+  </table>  
 </div>
+<router-outlet></router-outlet>

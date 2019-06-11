@@ -6,15 +6,21 @@ import { SubjectsContainerComponent } from './subjects-container.component';
 import { SubjectsRoutingModule } from './subjects-routing.module';
 import { SubjectsTableComponent } from './subjects-shared/subjects-table/subjects-table.component';
 import { SubjectsDataService } from './services/subjects-data.service';
+import { SubjectDetailComponent } from './components/subject-detail/subject-detail.component';
+
+import { StoreModule } from '@ngrx/store';
+import { navReducer } from './reducers/details-nav.reducer';
 
 @NgModule({
   imports: [  
     CommonModule,  
     SubjectsRoutingModule,
+    StoreModule.provideStore({ navReducer }),
   ],
   declarations: [
     SubjectsContainerComponent,
-    SubjectsTableComponent
+    SubjectsTableComponent,
+    SubjectDetailComponent
   ],
   providers: [
     SubjectsDataService
