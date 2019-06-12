@@ -12,7 +12,7 @@ import { StoreModule } from '@ngrx/store';
 import { navReducer } from './reducers/details-nav.reducer';
 import { SubjectsComponent } from './components/subjects/subjects.component';
 import { EffectsModule } from '@ngrx/effects';
-import { SubjectEffects } from './effects/subjects-effects.effects';
+import { SubjectsEffects } from './effects/subjects.effects';
 
 import {
   MdButtonModule, MdCardModule,
@@ -32,7 +32,7 @@ import {
     MdButtonModule,
     MdCardModule,
 
-    EffectsModule.run(SubjectEffects),
+    EffectsModule.run(SubjectsEffects),
   ],
   declarations: [
     SubjectsContainerComponent,
