@@ -10,17 +10,35 @@ import { SubjectDetailComponent } from './components/subject-detail/subject-deta
 
 import { StoreModule } from '@ngrx/store';
 import { navReducer } from './reducers/details-nav.reducer';
+import { SubjectsComponent } from './components/subjects/subjects.component';
+import { EffectsModule } from '@ngrx/effects';
+import { SubjectEffects } from './effects/subjects-effects.effects';
+
+import {
+  MdButtonModule, MdCardModule,
+  MdIconModule, MdIconRegistry, MdLineModule, MdListModule, 
+  MdToolbarModule
+} from '@angular/material';
 
 @NgModule({
   imports: [  
     CommonModule,  
     SubjectsRoutingModule,
     StoreModule.provideStore({ navReducer }),
+    MdToolbarModule,
+    MdIconModule,
+    MdLineModule,
+    MdListModule,
+    MdButtonModule,
+    MdCardModule,
+
+    EffectsModule.run(SubjectEffects),
   ],
   declarations: [
     SubjectsContainerComponent,
     SubjectsTableComponent,
-    SubjectDetailComponent
+    SubjectDetailComponent,
+    SubjectsComponent
   ],
   providers: [
     SubjectsDataService

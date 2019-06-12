@@ -1,5 +1,7 @@
 export class Subject {
-    constructor(public name?: string,) {
+    constructor(public id: string,
+                public name: string,
+                public description: string) {
     }
   }
   

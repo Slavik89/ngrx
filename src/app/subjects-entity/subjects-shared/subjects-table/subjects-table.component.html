@@ -3,18 +3,16 @@
     <thead>
     <tr>
       <th>№</th>
-      <th>Subject</th>     
+      <th>Subject</th>
+      <th>See details</th>     
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>1</td>
-      <td>Biology</td>    
-      <td>        
-        <a routerLink="details">See details</a>
-      </td>
+    <tr *ngFor="let subject of subjects let i=index">
+      <td>{{i+1}}</td>
+      <td>{{subject.name}}</td>          
     </tr>    
     </tbody>
   </table>  
 </div>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
