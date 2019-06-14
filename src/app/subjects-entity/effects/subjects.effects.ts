@@ -11,20 +11,20 @@ import { Observable } from 'rxjs/Observable';
 import { empty } from 'rxjs/observable/empty';
 import { of } from 'rxjs/observable/of';
 
-import { StudentsDataService } from '../../students-entity/services/students-data.service';
-import * as student from '../actions/studentsActions';
+import { SubjectsDataService } from '../services/subjects-data.service';
+import * as subject from '../actions/subjects.actions';
 
 @Injectable()
-export class StudentEffects {
+export class SubjectEffects {
 
   @Effect()
-  getStudents$: Observable<Action> = this.actions$
-    .ofType(student.GET_STUDENTS)
+  getSubjects$: Observable<Action> = this.actions$
+    .ofType(subject.GET_SUBJECTS)
     .switchMap(() => {
-      return this.studentDataService.fetchStudents()
-        .map(students => new student.LoadSuccess(students))
-        .catch(() => of(new student.LoadFail()));
+      return this.subjectDataService.fetchSubjects()
+        .map(subjects => new subject.LoadSuccess(subjects))
+        .catch(() => of(new subject.LoadFail));
     });
 
-  constructor(private actions$: Actions, private studentDataService: StudentsDataService) { }
+  constructor(private actions$: Actions, private subjectDataService: SubjectsDataService) { }
 }

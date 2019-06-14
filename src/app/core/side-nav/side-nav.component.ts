@@ -9,6 +9,6 @@ export class SideNavComponent {
   @Input() open = false;
 
   onClosedSideNav() {
-    console.log('closed');
+    //console.log('closed');
   }
 }

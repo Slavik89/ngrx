@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs/Observable';
 
@@ -21,6 +21,5 @@ export class StudentsContainerComponent {
     store.dispatch(new student.GetStudents());
     this.students$ = store.select(fromRoot.getStudentEntities);
   }
-
 
 }

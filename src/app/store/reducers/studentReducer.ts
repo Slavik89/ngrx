@@ -16,6 +16,7 @@ const initialState: State = {
 
 export function reducer(state = initialState, action: students.Actions): State {
   switch (action.type) {
+    
     case students.LOAD: {
       return Object.assign({}, state, {
         loading: true

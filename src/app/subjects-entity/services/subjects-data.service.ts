@@ -13,13 +13,13 @@ export class SubjectsDataService {
 
   constructor() { }
 
-  /* fetchSubjects(): Observable<Subject[]> {
+  fetchSubjects(): Observable<Subject[]> {
     return Observable.of(Subjects);
   }
 
-  fetchSubjec(id: number | string): Observable<Subject[]> {
+  fetchSubject(id: number | string): Observable<Subject[]> {
     const subject = Subjects.filter(sb => sb.id === id);
     return Observable.of(subject);
-  } */
+  }
 
 }
